@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
 
-const ProfileScreen = () => {
+const Accounts = () => {
   const [profileImage, setProfileImage] = useState(null);
 
   const selectImage = () => {
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileScreen;
+export default Accounts;

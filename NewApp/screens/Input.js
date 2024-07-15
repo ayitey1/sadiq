@@ -44,8 +44,8 @@ const handlelogin = () => {
         </View>
        
         <View style={styles.SignIn}></View>
-        <TouchableOpacity onPress={handleRegister}>
-            <Text style={styles.footerText}>
+        <TouchableOpacity >
+            <Text style={styles.footerText} onPress={handleRegister}>
                 Don't have an account?{" "}
                 <Text style={{textDecorationLine:"underline"}}>SIGN-UP</Text>
             </Text>
@@ -237,5 +237,7 @@ const styles = StyleSheet.create({
         color:'gray'
     },
 
-    
+    SignIn:{
+        top:3,
+    }
 })

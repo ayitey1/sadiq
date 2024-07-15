@@ -2,8 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Button, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const Enter = () => {
   const navigation =  useNavigation();
   const handleRegister=() =>{
@@ -48,6 +47,14 @@ const Enter = () => {
                 </Text>
                 </TouchableOpacity>
         </View>
+        <View style={styles.loginwithcontiner}>
+    <Text style={styles.textcontainer}>Sign  In with </Text>
+</View>
+        <View style={styles.Iconcontainer}>
+      <MaterialCommunityIcons name="google" size={30} color="#DB4437" />
+      <MaterialCommunityIcons name="facebook" size={30} color="#3b5998" />
+      <Icon name="apple" size={30} color="#000000" />
+    </View>
     </SafeAreaView>
   )
 }
@@ -126,6 +133,29 @@ buttonContainer: {
     width: 170,
     left:10,
     top:20
-  }
+  },
+  Iconcontainer:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+    columnGap:6,
+    top:710,
+    position:'absolute',
+    left:120,
+    columnGap:12,
+},
+loginwithcontiner:{
+  top:65,
+  left:150
+  
 
+},
+textcontainer:{
+  alignContent:'center',
+  justifyContent:'center',
+  right:10,
+  top:15
+
+},
 })

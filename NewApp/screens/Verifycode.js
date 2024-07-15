@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { TextInputMask } from 'react-native-masked-text';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -13,6 +13,11 @@ const Verifycode = () => {
   
   navigation.navigate('Enter');
   };
+  const handlelogin=()=>{
+  
+  
+    navigation.navigate('Test');
+    };
   const handleChangeText = (text) => {
     setCode(text);
     if (text.length === 6) {
@@ -49,6 +54,9 @@ const Verifycode = () => {
 
       />
       </View>
+      <View style={styles.buttonContainer}>
+        <Button title="LOG IN" color='#B96CB9' size={300} onPress={handlelogin} style={styles.button} />
+        </View>
       </KeyboardAwareScrollView>
   );
 };
@@ -59,8 +67,8 @@ const styles = StyleSheet.create({
   },
   
   input: {
-    
- 
+    left:150,
+    marginTop:100
   },
   bluecontainer:{
     height:230,
@@ -95,7 +103,17 @@ const styles = StyleSheet.create({
   icon:{
     top:60,
     left:7
+  },
+   
+  buttonContainer: {
+    width: 150,
+    height: 70,
+    marginHorizontal:150,
+    marginTop:240,
+    borderRadius:10,
+    top:70
   }
+    
 
 
 

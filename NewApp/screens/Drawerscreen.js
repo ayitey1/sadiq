@@ -30,7 +30,7 @@ const handleaccount=() =>{
     const [drawerPosition, setDrawerPosition] = useState('left');
     const navigationView = () => (
         <SafeAreaView style={[styles.container, styles.navigationContainer]}>
-            <View><Text style={styles.textg}>My Account</Text></View>
+            <View><Text style={styles.textg}>USER</Text></View>
             <View style={styles.acontainer}>
             <Pressable
         style={({ pressed }) => [
@@ -226,6 +226,10 @@ separator: {
     top:10
   },
   textg:{
-    left:0
+    left:60,
+    top:30,
+    fontSize:16,
+    fontWeight:'bold',
+    color:'#1C05B3'
   }
 })
